@@ -68,17 +68,18 @@ class Contacts:
             contacts = [json.loads(line) for line in file]
             for contact in contacts:
                 print(contact)
-    
-print("1-Add contact\n2-Edit contact\n3-Delete contact\n4-Show my list")
-num = input("Enter the number of the operation you want: ")
 
-if num == '1':
-    Contacts.add()
-elif num == '2':
-    Contacts.edit()
-elif num == '3':
-    Contacts.delete()
-elif num == '4':
-    Contacts.show()
-else:
-    print("Invalid input")
+while True:  
+    print("1-Add contact\n2-Edit contact\n3-Delete contact\n4-Show my list")
+    num = input("Enter the number of the operation you want: ")
+
+    if num == '1':
+        Contacts.add()
+    elif num == '2':
+        Contacts.edit()
+    elif num == '3':
+        Contacts.delete()
+    elif num == '4':
+        Contacts.show()
+    else:
+        print("Invalid input")
